@@ -6,21 +6,38 @@ class Notes {
 		int[] testArray = {5, 9, 1, 2, 3, 5, 7, 8, 2, 3, 14, 356, 25, 8, 26, 8, 3, 5};
 
 		for (int i = 1; i < testArray.length; i++) {
-			// compare to all the numbers before
 			int key = testArray[i];
-			int index = i - 1;
-			while (index >= 0 && testArray[index] > key) { //check for -1 first
+			int index = i-1;
+			while (index >= 0 && key < testArray[index]) {
 				testArray[index + 1] = testArray[index];
 				index--;
 			}
 			testArray[index + 1] = key;
 		}
 
-		
-
-		for (int i = 0; i < testArray.length; i++) {
+		for(int i = 0; i < testArray.length; i++) {
 			System.out.print(testArray[i] + " ");
 		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		
 
 
